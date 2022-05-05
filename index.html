@@ -104,7 +104,7 @@
 
     @media only screen and (max-width:1100px) {
         .grid {
-            grid-template-columns: 50% 50%;
+            grid-template-columns: 48% 48%;
         }
     }
 
@@ -145,6 +145,11 @@
 
     .justify{
         text-align: justify;
+    }
+    .botright{
+        position:absolute;
+        bottom: 10px;
+        right: 10px;
     }
 </style>
 
@@ -302,27 +307,32 @@
         <div class="popup__wrapper">
             <a class="popup__close" href="#">X</a>
             <div>
-                <h1>Taking Cover</h1>
-                <p>POPUP 1 : CONTENT HERE</p>
-                <table style="table-layout: auto; width: 400px;">
-                    <tr>
-                        <th style="text-align: left;">Health</th>
-                        <th style="text-align: left;">Modifier</th>
-                    </tr>
-                    <tr>
-                        <td>Full</td>
-                        <td>0, Normal roll</td>
-                    </tr>
-                    <tr>
-                        <td>Below half</td>
-                        <td>-1 successes</td>
-                    </tr>
-                    <tr>
-                        <td>1 HP</td>
-                        <td>-2 successes</td>
-                    </tr>
-                </table>
+                <h1>Critical failure</h1>
+                <p>You critically fail when you roll 3 less successes than required.</p>
+                <p>Underperforming when attempting a task can bring
+                    catastrofic results. That is why if you score a roll with
+                    less than 3 successes than required you will not just
+                    fail to do the task, but something bad will happen at
+                    your Storyteller's discretion.</p>
+                <p>Effects could include:</p>
+                <ul>
+                    <li>Recieving Damage</li>
+                    <li>Damaging an Alli</li>
+                    <li>Making the task completely impossible</li>
+                    <li>Getting a Status Ailment</li>
+                    <li>... or worse.</li>
+                </ul>
+                <p>
+                    That means that tasks that are Troublesome, or
+                    Challenging can be attempted safely, but as soon as
+                    the difficulty becomes Hard the possibilities of suffering
+                    injury or having disastrous consequences are very real.
+                    The farther your roll is to the required successes, the
+                    worse the outcome will be.
+                </p>
+                <div class="botright">ref: p.29</div>
             </div>
+            
         </div>
     </div>
 
