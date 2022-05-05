@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/68cbf5c6f3.js" crossorigin="anonymous"></script>
+    <title>Pokérole Quick ref</title>
+</head>
+<style>
+    * {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    p>a{
+        color:red;
+        transition: all .5s ease; 
+    }
+    p>a:visited{
+        color: red;
+        transition: all .5s ease; 
+    }
+    p>a:hover{
+        color:violet;
+        transition: all .5s ease; 
+        
+    }
+    [id^=modal] {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    [id^=modal]:target {
+        display: block;
+    }
+
+    input[type=checkbox] {
+        position: absolute;
+        clip: rect(0 0 0 0);
+    }
+
+    .popup {
+        width: 100%;
+        height: 100%;
+        z-index: 99999;
+    }
+
+    .popup__overlay {
+        position: fixed;
+        z-index: 1;
+        display: block;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: #000000b3;
+    }
+
+    .popup__wrapper {
+        position: fixed;
+        z-index: 9;
+        width: 80%;
+        height: 80%;
+        max-width: 1200px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 8px;
+        padding: 58px 32px 32px 32px;
+        background: #fff;
+    }
+
+    .popup__close {
+        position: absolute;
+        top: 16px;
+        right: 26px;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+
+    .category {
+        border: 3px solid #012766;
+        border-radius: 20px;
+        padding: 20px;
+        margin-top: 10px;
+        margin-top: 10px;
+    }
+
+    .grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 22% 22% 22% 22%;
+        gap: 4%;
+    }
+
+    .grid>div{
+        overflow: hidden;
+    }
+
+    @media only screen and (max-width:1100px) {
+        .grid {
+            grid-template-columns: 50% 50%;
+        }
+    }
+
+    @media only screen and (max-width:600px) {
+        .grid {
+            grid-template-columns: 100%;
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .button:hover{
+        color:black;
+        transition: all .5s ease; 
+    }
+    
+    .button{
+        transition: all .5s ease; 
+    }
+
+    .button>i {
+        float: left;
+        margin-right: 10px;
+    }
+
+    .button>.btnHeader {
+        font-weight: bold;
+    }
+
+    .button>span {
+        height: 50%;
+    }
+
+    .justify{
+        text-align: justify;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="category">
+            <h2>Combat actions (Pokémon)</h2>
+            <p style="font-stle: italic;">A Pokémon can do multiple actions per turn, but, be careful as <a href="#modalCritFail">critically failing</a> an action can expose your Pokémon to dangers.</p>
+            <div class="grid">
+                
+                    <a class="button" href="#modalUsingAMove">
+                        <i class="fa-brands fa-servicestack fa-3x"></i>
+                        <span class="btnHeader">Using a Move <br /></span>
+                        <span class="btndescription">Pokémon have many, use them wisely</span>
+                    </a>
+                    
+                
+
+                
+                    <a class="button" href="#modalEvade">
+                        <i class="fa-solid fa-arrow-trend-up fa-3x"></i>
+                        <span class="btnHeader">Evade (1/turn) <br /></span>
+                        <span class="btndescription">Dodge an attack</span>
+                    </a>
+                    
+                
+
+               
+                    <a class="button" href="#modalClash">
+                        <i class="fa-solid fa-bahai fa-3x"></i>
+                        <span class="btnHeader">Clash <br /></span>
+                        <span class="btndescription">Rely on sheer power</span>
+                    </a>
+                    
+                
+                
+                    <a class="button" href="#modalCover">
+                        <i class="fa-solid fa-shield fa-3x"></i>
+                        <span class="btnHeader">Take cover (1/turn)<br /></span>
+                        <span class="btndescription">Hide from ranged attacks</span>
+                    </a>
+                
+            </div>
+        </div>
+        <div class="category trainer">
+            <h2>Rolling to attack</h2>
+            <div class="grid">
+                <div>
+                    <h3>Rolled successess</h3>
+                    <p class="justify">When rolling in pokérole, you roll an x amount of d6. For every dice rolling <b>4 or higher</b> you gain a success. <br></p>
+                    <p class="justify">
+                        On<b> 1 or more successes</b>, the action succeeds. <br>
+                        On<b> 3 or more successes</b>, you gain a critical success</p>
+                    <br>
+                    <p class="justify"><b>When using a move</b>, your amount of dice are stated on the move card.</p>
+                    <p class="justify"><b>When you are clashing</b>, your amount of dice are equal to: STR/Special + Clash.</p>
+                    <p class="justify"><b>When you are evading</b>, your amount of dice are equal to: DEX + Evade.</p>
+                </div>
+                <div>
+                    <h3>Accuracy bonus</h3>
+                    <p class="justify">Depending on the state of combat and the move you are using, you may have a higher or lower chance of striking true. This is called an accuracy bonus.</p>
+                    <p class="justify">Add or remove any accuracy bonusses you have from the ammount of successes.</p>
+                </div>
+                <div>
+                    <h3>Pain state</h3>
+                    <p class="justify">If you or your Pokémon is hurt, you have a lower chance of succeeding. This is represented by your pain state.</p>
+                    <table style="table-layout: auto; width: 100%;">
+                        <tr>
+                            <th style="text-align: left;">Health</th>
+                            <th style="text-align: left;">Modifier</th>
+                        </tr>
+                        <tr>
+                            <td>Full</td>
+                            <td>0, Normal roll</td>
+                        </tr>
+                        <tr>
+                            <td>Below half</td>
+                            <td>-1 successes</td>
+                        </tr>
+                        <tr>
+                            <td>1 HP</td>
+                            <td>-2 successes</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h3>Multiple Actions</h3>
+                    <p class="justify">During a turn, your Pokémon can use multiple actions to push it's advantage. When using multiple actions your Pokémon hurries, making it less likely to succeed. Don't push your Pokémon too hard, because if you end up with <b>3 successes less than required</b> the Pokémon will <a href="#modalCritFail">critically fail</a>, meaning something bad like taking damage from your own strike or damaging an ally.</p>
+                    <table style="table-layout: auto; width: 100%;">
+                        <tr>
+                            <th style="text-align: left;">Action no.</th>
+                            <th style="text-align: left;">Required successes</th>
+                        </tr>
+                        <tr>
+                            <td>1st Action</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2nd Action</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>3rd Action</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>4th Action</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>5th Action</td>
+                            <td>5</td>
+                        </tr>
+                    </table>
+                    <p>At the end of the round, the multiple actions counter resets.</p>
+                </div>
+            </div>
+        </div>
+        <div class="category">
+            <h2>Trainer actions</h2>
+            <p>Trainer actions happen at the end of each round, where every trainer has time for 1 action.</p>
+            <div class="grid">
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--
+        MODALS
+    -->
+
+    <div class="popup" id="modalCritFail">
+        <a class="popup__overlay" href="#"></a>
+        <div class="popup__wrapper">
+            <a class="popup__close" href="#">X</a>
+            <div>
+                <h1>Taking Cover</h1>
+                <p>POPUP 1 : CONTENT HERE</p>
+                <table style="table-layout: auto; width: 400px;">
+                    <tr>
+                        <th style="text-align: left;">Health</th>
+                        <th style="text-align: left;">Modifier</th>
+                    </tr>
+                    <tr>
+                        <td>Full</td>
+                        <td>0, Normal roll</td>
+                    </tr>
+                    <tr>
+                        <td>Below half</td>
+                        <td>-1 successes</td>
+                    </tr>
+                    <tr>
+                        <td>1 HP</td>
+                        <td>-2 successes</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="modalCover">
+        <a class="popup__overlay" href="#"></a>
+        <div class="popup__wrapper">
+            <a class="popup__close" href="#">X</a>
+            <div>
+                <h1>Taking Cover</h1>
+                <p>POPUP 1 : CONTENT HERE</p>
+                <table style="table-layout: auto; width: 400px;">
+                    <tr>
+                        <th style="text-align: left;">Health</th>
+                        <th style="text-align: left;">Modifier</th>
+                    </tr>
+                    <tr>
+                        <td>Full</td>
+                        <td>0, Normal roll</td>
+                    </tr>
+                    <tr>
+                        <td>Below half</td>
+                        <td>-1 successes</td>
+                    </tr>
+                    <tr>
+                        <td>1 HP</td>
+                        <td>-2 successes</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="modalClash">
+        <a class="popup__overlay" href="#"></a>
+        <div class="popup__wrapper">
+            <a class="popup__close" href="#">X</a>
+            <div>
+                <h1>Clashing</h1>
+                <p>POPUP 1 : CONTENT HERE</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="modalUsingAMove">
+        <a class="popup__overlay" href="#"></a>
+        <div class="popup__wrapper">
+            <a class="popup__close" href="#">X</a>
+            <div>
+                <h1>Using a Move</h1>
+                <p>POPUP 1 : CONTENT HERE</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="modalEvade">
+        <a class="popup__overlay" href="#"></a>
+        <div class="popup__wrapper">
+            <a class="popup__close" href="#">X</a>
+            <div>
+                <h1>Evading</h1>
+                <p>POPUP 1 : CONTENT HERE</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
