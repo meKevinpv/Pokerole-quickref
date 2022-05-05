@@ -95,6 +95,7 @@
         display: grid;
         grid-template-columns: 22% 22% 22% 22%;
         gap: 4%;
+        row-gap: 30px;
     }
 
     .grid>div{
@@ -116,14 +117,17 @@
     a {
         text-decoration: none;
     }
-
+    .button:visited{
+        color: black;
+    }
     .button:hover{
-        color:black;
+        color:gray;
         transition: all .5s ease; 
     }
     
     .button{
         transition: all .5s ease; 
+        color: black;
     }
 
     .button>i {
@@ -157,17 +161,11 @@
                         <span class="btndescription">Pokémon have many, use them wisely</span>
                     </a>
                     
-                
-
-                
                     <a class="button" href="#modalEvade">
                         <i class="fa-solid fa-arrow-trend-up fa-3x"></i>
                         <span class="btnHeader">Evade (1/turn) <br /></span>
                         <span class="btndescription">Dodge an attack</span>
                     </a>
-                    
-                
-
                
                     <a class="button" href="#modalClash">
                         <i class="fa-solid fa-bahai fa-3x"></i>
@@ -175,8 +173,6 @@
                         <span class="btndescription">Rely on sheer power</span>
                     </a>
                     
-                
-                
                     <a class="button" href="#modalCover">
                         <i class="fa-solid fa-shield fa-3x"></i>
                         <span class="btnHeader">Take cover (1/turn)<br /></span>
@@ -191,7 +187,7 @@
                 <div>
                     <h3>Rolled successess</h3>
                     <p class="justify">When rolling in pokérole, you roll an x amount of d6. For every dice rolling <b>4 or higher</b> you gain a success. <br></p>
-                    <p class="justify">
+                    <p>
                         On<b> 1 or more successes</b>, the action succeeds. <br>
                         On<b> 3 or more successes</b>, you gain a critical success</p>
                     <br>
@@ -263,7 +259,35 @@
             <h2>Trainer actions</h2>
             <p>Trainer actions happen at the end of each round, where every trainer has time for 1 action.</p>
             <div class="grid">
+                <a class="button" href="#modalSwitch">
+                    <i class="fa-solid fa-repeat fa-3x"></i>
+                    <span class="btnHeader">Switching Pokémon<br /></span>
+                    <span class="btndescription">Hide from ranged attacks</span>
+                </a>
 
+                <a class="button" href="#modalItem">
+                    <i class="fa-solid fa-spray-can-sparkles fa-3x"></i>
+                    <span class="btnHeader">Using an item on a Pokémon<br /></span>
+                    <span class="btndescription">Hide from ranged attacks</span>
+                </a>
+
+                <a class="button" href="#modalCover">
+                    <i class="fa-solid fa-shield fa-3x"></i>
+                    <span class="btnHeader">Search for cover<br /></span>
+                    <span class="btndescription">Hide from ranged attacks</span>
+                </a>
+
+                <a class="button" href="#modalEnterTheFray">
+                    <i class="fa-solid fa-triangle-exclamation fa-3x"></i>
+                    <span class="btnHeader">Enter the fray<br /></span>
+                    <span class="btndescription">Hide from ranged attacks</span>
+                </a>
+
+                <a class="button" href="#modalRun">
+                    <i class="fa-solid fa-person-running fa-3x"></i>
+                    <span class="btnHeader">Run Away from Battle<br /></span>
+                    <span class="btndescription">Hide from ranged attacks</span>
+                </a>
             </div>
         </div>
     </div>
