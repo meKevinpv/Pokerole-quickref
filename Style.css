@@ -2,7 +2,13 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body{
-    background-color: lightgrey;
+    background-image: url(https://i.imgur.com/2gfwG.png);
+    background-size: 100% 100%;
+}
+.wrapper{
+    width: 80vw;
+    margin: 0 auto;
+
 }
 p>a {
     color: red;
@@ -51,6 +57,8 @@ input[type=checkbox] {
     height: 100%;
     width: 100%;
     background: #000000b3;
+    opacity: 100%;
+    
 }
 
 .popup__wrapper {
@@ -73,9 +81,6 @@ input[type=checkbox] {
     right: 26px;
 }
 
-.wrapper {
-    width: 100%;
-}
 
 .category {
     border: 5px solid #012766;
@@ -83,6 +88,18 @@ input[type=checkbox] {
     margin-top: 10px;
     margin-top: 10px;
     box-sizing: border-box;
+}
+
+.glass{
+    background-color: #ffffffb6;
+	backdrop-filter: blur(20px);
+	border: 2px solid #ffffff30;
+	border-radius: 15px;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 0 15px -5px #00000030;
+	padding: 15px;
+    color: black ;
 }
 
 .grid {
@@ -108,6 +125,10 @@ input[type=checkbox] {
 @media only screen and (max-width:960px) {
     .grid {
         grid-template-columns: 48% 48%;
+        
+    }
+    .wrapper{
+        width: 100%;
     }
 }
 @media only screen and (max-width:600px) {
