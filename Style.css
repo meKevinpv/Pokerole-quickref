@@ -191,6 +191,8 @@ a {
     border-radius: 100px;
     font-weight: bold;
     padding: 10px;
+    margin-bottom: 20px;
+    white-space: nowrap;
 }
 .bottom25{
     margin-bottom: 25px;
@@ -239,7 +241,7 @@ a {
 }
 
 .grid>a>button{
-    background-color: rgb(104, 24, 90);
+    background-color: rgb(165, 21, 141);
     padding: 30px;
     border-radius: 20px;
     font-size: large;
