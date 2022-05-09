@@ -17,7 +17,7 @@
                 <span style="float: right; font-weight: 400;">Multiple per round</span>
             </h2>
             <div class="category-content">
-                <p style="font-stle: italic;">A Pokémon can do multiple actions per turn, but, be careful as <a
+                <p style="font-stle: italic;">A Pokémon can do multiple actions per round, but, be careful as <a
                         href="#modalCritFail">critically failing</a> an action can expose your Pokémon to dangers.</p>
                 <div class="grid">
 
@@ -29,7 +29,7 @@
 
                     <a class="button" href="#modalEvade">
                         <i class="fa-solid fa-arrow-trend-up fa-2x"></i>
-                        <span class="btnHeader">Evade (1/turn) <br /></span>
+                        <span class="btnHeader">Evade (1/Round) <br /></span>
                         <span class="btndescription">Dodge an attack</span>
                     </a>
 
@@ -41,7 +41,7 @@
 
                     <a class="button" href="#modalCover">
                         <i class="fa-solid fa-shield fa-2x"></i>
-                        <span class="btnHeader">Take cover (1/turn)<br /></span>
+                        <span class="btnHeader">Take cover (1/Round)<br /></span>
                         <span class="btndescription">Hide from ranged attacks</span>
                     </a>
 
@@ -51,7 +51,7 @@
         </div>
         <div class="category trainerActions">
             <h2 class="category-title">Trainer actions
-                <span style="float: right; font-weight: 400;">1/round (end of round)</span>
+                <span style="float: right; font-weight: 400;">1/Round (end of round)</span>
             </h2>
             <div class="category-content">
                 <p>Trainer actions happen at the end of each round, where every trainer has time for 1 action.</p>
@@ -97,14 +97,16 @@
                 <div class="grid">
                     <div>
                         <h3>Rolled successess</h3>
-                        <p class="justify">When rolling in pokérole, you roll an x amount of d6. For every dice rolling <b>4 or higher</b> you gain a success. <br></p>
+                        <p class="justify">When rolling in pokérole, you roll an x amount of d6. For every dice rolling
+                            <b>4, 5 or 6</b> you gain a success. <br></p>
                         <p>
                             On<b> 1 or more successes</b>, the action succeeds. <br>
                             On<b> 3 or more successes</b>, you gain a critical success</p>
                         <br>
                         <p class="justify"><b>When using a move</b>, your amount of dice are stated on the move card.
                         </p>
-                        <p class="justify"><b>When you are clashing</b>, your amount of dice are equal to: STR/Special + Clash.</p>
+                        <p class="justify"><b>When you are clashing</b>, your amount of dice are equal to: STR/Special +
+                            Clash.</p>
                         <p class="justify"><b>When you are evading</b>, your amount of dice are equal to: DEX + Evade.
                         </p>
                     </div>
@@ -178,9 +180,23 @@
                             </tr>
                         </table>
                         <p>At the end of the round, the multiple actions counter resets.</p>
-                        
                     </div>
-                    
+                </div>
+            </div>
+        </div>
+        <div class="category attackRoll" id="quickref">
+            <h2 class="category-title">
+                Info
+            </h2>
+            <div class="category-content quickref">
+                <div class="grid">
+                    <a href="#modalRWI"><button>Resistances, Weaknesses & Immunityies</button></a>
+                    <a href="#modalWill"><button>Will Points</button></a>
+                    <a href="#modalCombatLoop"><button>Combat loop</button></a>
+                    <a href="#modalStatus"><button>Status effects</button></a>
+                    <a href="#modalWeather"><button>Weather effects</button></a>
+                    <a href="#modalCatching"><button>Catching Pokémon</button></a>
+                    <a href="#modalTraining"><button>Training Pokémon</button></a>
                 </div>
             </div>
         </div>
@@ -188,6 +204,7 @@
 
 
 
+    :
     <!--
         MODALS
     -->
@@ -257,7 +274,7 @@
                 <p>It is possible to avoid damage completely at Storyteller’s
                     Discretion. A Cover may be destroyed after taking a few
                     hits.</p>
-                    <div class="botright">ref: p.51</div>
+                <div class="botright">ref: p.51</div>
             </div>
         </div>
     </div>
@@ -283,16 +300,16 @@
                     damage instead of the foe making a damage roll.</p>
                 <p>Clashing counts as an Action, thus, acting again this
                     Round will require another Success as stated on the
-                    table for Multiple Actions.<br/>
-                All Damage taken from a Clash is affected by the
-                    Super Effective and It’s Not Very Effective rule.<br/>
-                While not as effective as Evasion to reduce damage
+                    table for Multiple Actions.<br />
+                    All Damage taken from a Clash is affected by the
+                    Super Effective and It’s Not Very Effective rule.<br />
+                    While not as effective as Evasion to reduce damage
                     intake, Clashing attacks is a good option for slower
-                    but strong and resilient Pokémon.<br/></p>
-                    <p>
-                Clash can be performed only once
+                    but strong and resilient Pokémon.<br /></p>
+                <p>
+                    Clash can be performed only once
                     per Round.</p>
-                    <div class="botright">ref: p.50</div>
+                <div class="botright">ref: p.50</div>
             </div>
         </div>
     </div>
@@ -304,11 +321,16 @@
             <div>
                 <h1>Using a Move</h1>
                 <p>During your Pokémon’s Turn you may order it to use a
-                    Move.<br/>
+                    Move.<br />
                     Once you have selected the Move, Roll the dice for Accuracy
-                    to see if the move hits or misses.<br/>
+                    to see if the move hits or misses.<br />
                     Each Move has its required Accuracy roll on its entry.</p>
-                <p>Depending on this Accuracy roll you determine weather the attack hits, however, a foe may choose to try and <a href="#modalEvade">evade</a> or <a href="#modalClash">clash</a> with the attack. After this is settled, the desired effect takes place. </p>
+                <p>Depending on this Accuracy roll you determine weather the attack hits, however, a foe may
+                    choose
+                    to
+                    try and <a href="#modalEvade">evade</a> or <a href="#modalClash">clash</a> with the attack.
+                    After
+                    this is settled, the desired effect takes place. </p>
                 <h2>Page numbers for move types:</h2>
                 <table>
                     <tr>
@@ -415,7 +437,7 @@
                     table for Multiple Actions.
                     Evasion can be performed only
                     once per Round.</p>
-                    <div class="botright">ref: p.50</div>
+                <div class="botright">ref: p.50</div>
             </div>
         </div>
     </div>
@@ -426,6 +448,35 @@
             <a class="popup__close" href="#">X</a>
             <div>
                 <h1>Switching Pokémon</h1>
+                <p>
+                    Trainers can spend their action to send out and recall up
+                    to two Pokémon. It is possible to Recall your Pokémon at
+                    any point during the Round, but During Official matches
+                    you must immediatley Send Out another Pokémon or
+                    else you are conceding defeat.
+                </p>
+                <div class="infoblock">
+                    <p>
+                        If a Pokémon is switched in the middle of the
+                        Round, it will be startled and disoriented as it
+                        is coming out from a safe environment within
+                        the Pokéball and into a chaotic battlefield.
+                    </p>
+                    <p>
+                        It will stay looking at its surroundings and
+                        <b>may become the target of an attack.</b>
+                    </p>
+                    <p>
+                        For a Switched Pokémon to get out of this
+                        dazed state it will need a few seconds to
+                        digest all that is happening, this means the
+                        Pokémon will not be able to attack or evade
+                        until the beginning of the next round.
+                        Switch your Pokémon at the end of the
+                        round to avoid this.
+                    </p>
+                </div>
+
                 <div class="botright">ref: p.45</div>
             </div>
         </div>
@@ -477,15 +528,95 @@
     </div>
 
     <div class="popup" id="modalRun">
-        <a class="popup__overlay" href="#"></a>
+        <a class="popup__overlay" href="#quickref"></a>
         <div class="popup__wrapper">
-            <a class="popup__close" href="#">X</a>
+            <a class="popup__close" href="#quickref">X</a>
             <div>
                 <h1>Run Away from Battle</h1>
                 <div class="botright">ref: p.46</div>
             </div>
         </div>
     </div>
+    <div class="popup" id="modalRWI">
+        <a class="popup__overlay" href="#quickref"></a>
+        <div class="popup__wrapper">
+            <a class="popup__close" href="#quickref">X</a>
+            <div>
+                <h1>Resistances, Weaknesses & Immunities</h1>
+                <p>There's work to do here... sorry!</p>
+                <div class="botright">ref: p.?</div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="modalWill">
+        <a class="popup__overlay" href="#quickref"></a>
+        <div class="popup__wrapper">
+            <a class="popup__close" href="#quickref">X</a>
+            <div>
+                <h1>Will</h1>
+                <p>There's work to do here... sorry!</p>
+                <div class="botright">ref: p.?</div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="modalCombatLoop">
+        <a class="popup__overlay" href="#quickref"></a>
+        <div class="popup__wrapper">
+            <a class="popup__close" href="#quickref">X</a>
+            <div>
+                <h1>Combat loop</h1>
+                <p>There's work to do here... sorry!</p>
+                <div class="botright">ref: p.?</div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="modalStatus">
+        <a class="popup__overlay" href="#quickref"></a>
+        <div class="popup__wrapper">
+            <a class="popup__close" href="#quickref">X</a>
+            <div>
+                <h1>Status effects</h1>
+<p>There's work to do here... sorry!</p>
+                <div class="botright">ref: p.?</div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="modalWeather">
+        <a class="popup__overlay" href="#quickref"></a>
+        <div class="popup__wrapper">
+            <a class="popup__close" href="#quickref">X</a>
+            <div>
+                <h1>Weather effects</h1>
+                <p>There's work to do here... sorry!</p>
+                <div class="botright">ref: p.?</div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="modalCatching">
+        <a class="popup__overlay" href="#quickref"></a>
+        <div class="popup__wrapper">
+            <div class="popup__wrapper">
+                <a class="popup__close" href="#quickref">X</a>
+                <div>
+                    <h1>Catching Pokémon</h1>
+                    <p>There's work to do here... sorry!</p>
+                    <div class="botright">ref: p.?</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="modalTraining">
+        <a class="popup__overlay" href="#attackroll"></a>
+        <div class="popup__wrapper">
+            <a class="popup__close" href="#">X</a>
+            <div>
+                <h1>Training Pokémon</h1>
+<p>There's work to do here... sorry!</p>
+                <div class="botright">ref: p.?</div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

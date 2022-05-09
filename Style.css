@@ -10,6 +10,14 @@ body{
     margin: 0 auto;
 
 }
+
+.quickref>.grid{
+    grid-column: 22% 22% 22% 22%;
+    margin-top: 20px;
+    row-gap: 10px;
+}
+
+
 p>a {
     color: red;
     transition: all .5s ease;
@@ -136,9 +144,15 @@ input[type=checkbox] {
     .wrapper{
         width: 100%;
     }
+ .quickref>.grid{
+        grid-template-columns: 48% 48%;
+    }
 }
 @media only screen and (max-width:600px) {
     .grid {
+        grid-template-columns: 100%;
+    }
+    .quickref>.grid{
         grid-template-columns: 100%;
     }
 }
@@ -209,6 +223,13 @@ a {
     margin: 0px;
 }
 
+.infoblock{
+    border: 3px solid green;
+    background-color: green;
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+}
 .category-content {
     padding-inline: 20px;
     padding-bottom: 20px;
@@ -217,6 +238,16 @@ a {
     border-radius: 20px;
 }
 
+.grid>a>button{
+    background-color: rgb(104, 24, 90);
+    padding: 30px;
+    border-radius: 20px;
+    font-size: large;
+    color: white;
+    border-width: 0;
+    width: 100%;
+    height: 100%;
+}
 .combatActions {
     background-color: rgb(179, 10, 10);
     border-color: rgb(179, 10, 10);
@@ -230,4 +261,9 @@ a {
 .trainerActions {
     background-color: darkblue;
     border-color: darkblue;
+}
+
+#quickref{
+    background-color: rgb(116, 13, 141);
+    border-color: rgb(116, 13, 141);
 }
