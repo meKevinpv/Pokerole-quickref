@@ -212,7 +212,6 @@
     <div class="popup" id="modalCritFail">
         <a class="popup__overlay" href="#"></a>
         <div class="popup__wrapper">
-            <a class="popup__close" href="#">X</a>
             <div>
                 <h1>Critical failure</h1>
                 <p>You critically fail when you roll 3 less successes than required.</p>
@@ -246,7 +245,6 @@
     <div class="popup" id="modalCover">
         <a class="popup__overlay" href="#"></a>
         <div class="popup__wrapper ">
-            <a class="popup__close" href="#">X</a>
             <div>
                 <h1>Taking Cover</h1>
                 <p>This action will help you resist damage against Ranged
@@ -282,7 +280,6 @@
     <div class="popup" id="modalClash">
         <a class="popup__overlay" href="#"></a>
         <div class="popup__wrapper">
-            <a class="popup__close" href="#">X</a>
             <div>
                 <h1>Clashing</h1>
                 <p>Some Pokémon are not dexterous enough to be constantly
@@ -319,7 +316,6 @@
     <div class="popup" id="modalUsingAMove">
         <a class="popup__overlay" href="#"></a>
         <div class="popup__wrapper">
-            <a class="popup__close" href="#">X</a>
             <div>
                 <h1>Using a Move</h1>
                 <p>During your Pokémon’s Turn you may order it to use a
@@ -420,7 +416,6 @@
     <div class="popup" id="modalEvade">
         <a class="popup__overlay" href="#"></a>
         <div class="popup__wrapper">
-            <a class="popup__close" href="#">X</a>
             <div>
                 <h1>Evading</h1>
                 <p>It is always a smart move to get away from danger. You
@@ -450,7 +445,6 @@
     <div class="popup" id="modalSwitch">
         <a class="popup__overlay" href="#"></a>
         <div class="popup__wrapper">
-            <a class="popup__close" href="#">X</a>
             <div>
                 <h1>Switching Pokémon</h1>
                 <p>
@@ -490,7 +484,6 @@
     <div class="popup" id="modalItem">
         <a class="popup__overlay" href="#"></a>
         <div class="popup__wrapper">
-            <a class="popup__close" href="#">X</a>
             <div>
                 <h1>Using an Item</h1>
                 <div class="botright">ref: p.45</div>
@@ -501,7 +494,6 @@
     <div class="popup" id="modalEnterTheFray">
         <a class="popup__overlay" href="#"></a>
         <div class="popup__wrapper">
-            <a class="popup__close" href="#">X</a>
             <div>
                 <h1>Entering the fray</h1>
                 <p>They say that if you want something done right you have
@@ -533,9 +525,8 @@
     </div>
 
     <div class="popup" id="modalRun">
-        <a class="popup__overlay" href="#quickref"></a>
+        <a class="popup__overlay" href="#"></a>
         <div class="popup__wrapper">
-            <a class="popup__close" href="#quickref">X</a>
             <div>
                 <h1>Run Away from Battle</h1>
                 <p>
@@ -559,7 +550,6 @@ ends. Being Blocked prevents you from escaping.
     <div class="popup" id="modalRWI">
         <a class="popup__overlay" href="#quickref"></a>
         <div class="popup__wrapper">
-            <a class="popup__close" href="#quickref">X</a>
             <div>
                 <h1>Resistances, Weaknesses & Immunities</h1>
                 <p>There's work to do here... sorry!</p>
@@ -570,10 +560,33 @@ ends. Being Blocked prevents you from escaping.
     <div class="popup" id="modalWill">
         <a class="popup__overlay" href="#quickref"></a>
         <div class="popup__wrapper">
-            <a class="popup__close" href="#quickref">X</a>
             <div>
                 <h1>Will</h1>
-                <p>There's work to do here... sorry!</p>
+                <p>
+                    Will is used to ignore pain or heal a Pokémon in combat it's uses are explained below and on the <a href="modalHeal">healing in battle</a> page.
+                </p>
+                <h2>Spend</h2>
+                <p>
+                    You can spend will points to:
+                    <ul>
+                        <li>
+                            Ignore one Pain Penalty for the rest of the Scene (1 point)
+                        </li>
+                        <li>
+                            Reroll one failure from each roll for the rest of the round. (1 point)
+                        </li>
+                    </ul>
+                </p>
+                <h2>Recovery</h2>
+                <p>
+                    You can recover will by:
+                    <ul>
+                        <li>Rest for a few days</li>
+                        <li>Feel accomplished by achieving something great</li>
+                        <li>Follow your nature</li>
+                        <li>Getting them as a reward for good roleplay</li>
+                    </ul>
+                </p>
                 <div class="botright">ref: p.?</div>
             </div>
         </div>
@@ -581,10 +594,55 @@ ends. Being Blocked prevents you from escaping.
     <div class="popup" id="modalCombatLoop">
         <a class="popup__overlay" href="#quickref"></a>
         <div class="popup__wrapper">
-            <a class="popup__close" href="#quickref">X</a>
             <div>
                 <h1>Combat loop</h1>
-                <p>There's work to do here... sorry!</p>
+                This part contains <span class="optional">optional parts</span>. They are conveniently colored for easy readability.
+                <h2>Start of combat</h2>
+                <ol>
+                    <li>Everyone Pokémon participating in combat rolls initiative. <br/><div class="center" style="line-height: 50px;"><span class="skillcheck">1d6+dex+alert</span></div></li>
+                    <li class="optional">Storyteller declares any Weather Effects in play.</li>
+                    <li>Trainers choose their Pokémon abilities for combat.</li>
+                </ol>
+                <h2>Round of Combat</h2>
+                <ol>
+                    <li>Each Pokémon takes a turn or passes in initiative order*</li>
+                    <li>Repeat previous step until all Pokémon pass</li>
+                    <li>Trainer actions</li>
+                    <li>Next round starts</li>
+                </ol>
+                * Priority moves can skip this, players may declare that their Pokémon will use it.
+                <h2>Pokémon Turn</h2>
+                <ol>
+                    <li>
+                        Choose a move that you haven't used this round
+                    </li>
+                    <li>
+                        Make accuracy roll using the move's listed dice pool<br/>
+                        Remember: Apply pain penalty and modifiers. (i.e. reduced accuracy)
+                    </li>
+                    <li>
+                        If the accuracy roll has more successes than required by the multi-action table: Attack hits! <br/>
+                        If it has three successes more than required: Critical hit! add 2 dice to the damage pool.
+                    </li>
+                    <li class="optional">
+                        Target can evade or clash with the attack (This also counts as an action)
+                    </li>
+                    <li>
+                        Roll damage, take into consideration: <br/>
+                        - Move's dice pool<br/>
+                        <span class="optional">- add 1d6 if the Move is the same type as it's User (STAB)</span> <br/>
+                        <span class="optional">- Critical hit damage if applicable</span><br/>
+                        - Subtract Target's Def/SpDef from dice pool<br/>
+                        <span class="optional">- Apply any modifiers</span>
+                    </li>
+                    <li>
+                        Apply damage<br/>
+                        <span class="condition">- If the target type is immune to move type:</span> <span class="negative">No damage is dealt</span><br/>
+                        <span class="condition">- No successes on damage roll:</span> <span>The attack deals 1 damage</span><br/>
+                        <span class="condition">- If target type resists move's type:</span> <span class="negative">The attack deals 1 less damage than rolled</span><br/>
+                        <span class="condition">- If target type is weak to move's type:</span> <span class="positive">The attack deals 1 more damage than rolled</span><br/>
+                    </li>
+                </ol>
                 <div class="botright">ref: p.?</div>
             </div>
         </div>
@@ -592,7 +650,6 @@ ends. Being Blocked prevents you from escaping.
     <div class="popup" id="modalStatus">
         <a class="popup__overlay" href="#quickref"></a>
         <div class="popup__wrapper">
-            <a class="popup__close" href="#quickref">X</a>
             <div>
                 <h1>Status effects</h1>
                 <p>There's work to do here... sorry!</p>
@@ -603,7 +660,6 @@ ends. Being Blocked prevents you from escaping.
     <div class="popup" id="modalWeather">
         <a class="popup__overlay" href="#quickref"></a>
         <div class="popup__wrapper">
-            <a class="popup__close" href="#quickref">X</a>
             <div>
                 <h1>Weather effects</h1>
                 <p>There's work to do here... sorry!</p>
@@ -615,7 +671,6 @@ ends. Being Blocked prevents you from escaping.
         <a class="popup__overlay" href="#quickref"></a>
         <div class="popup__wrapper">
             <div class="popup__wrapper">
-                <a class="popup__close" href="#quickref">X</a>
                 <div>
                     <h1>Catching Pokémon</h1>
                     <p>There's work to do here... sorry!</p>
@@ -627,10 +682,21 @@ ends. Being Blocked prevents you from escaping.
     <div class="popup" id="modalTraining">
         <a class="popup__overlay" href="#attackroll"></a>
         <div class="popup__wrapper">
-            <a class="popup__close" href="#">X</a>
             <div>
                 <h1>Training Pokémon</h1>
                 <p>There's work to do here... sorry!</p>
+                <div class="botright">ref: p.?</div>
+            </div>
+        </div>
+    </div>
+<div class="popup" id="modalHeal">
+        <a class="popup__overlay" href="#quickref"></a>
+        <div class="popup__wrapper">
+            <div>
+                <h1>Will</h1>
+                <p>
+                    Will is used to ignore pain or heal a Pokémon in combat it's uses are explained below and on the <a href="modalHealing">healing in battle</a> page.
+                </p>
                 <div class="botright">ref: p.?</div>
             </div>
         </div>
