@@ -159,6 +159,9 @@ input[type=checkbox] {
     .quickref>.grid{
         grid-template-columns: 100%;
     }
+.category-title>span{
+    display: none;    
+}
 }
 
 a {
